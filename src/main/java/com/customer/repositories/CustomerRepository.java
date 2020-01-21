@@ -8,7 +8,6 @@ import com.customer.entities.CustomerEntity;
 
 @Repository
 public interface CustomerRepository extends CrudRepository<CustomerEntity, Integer> {
-	public CustomerEntity  findByfName(String fName);
 	
 
 }

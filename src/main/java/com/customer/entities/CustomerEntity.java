@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 
 @Entity
@@ -18,7 +20,7 @@ public class CustomerEntity {
 	private Integer id;
 
 	@Column(name = "uid")
-	private Long uuid;
+	private String uuid;
 
 	@Column(name = "first_name")
 	private String fName;
@@ -40,6 +42,20 @@ public class CustomerEntity {
 
 	@Column(name = "is_active")
 	private Boolean isActive;
+	
+	@PrePersist
+	public void onPersist() {
+		if (this.createdAt == null) {
+			this.createdAt = new Date();
+		}
+	}
+
+	@PreUpdate
+	public void onUpdate() {
+		if (this.updatedAt == null) {
+			this.updatedAt = new Date();
+		}
+	}
 
 	public Integer getId() {
 		return id;
@@ -49,11 +65,11 @@ public class CustomerEntity {
 		this.id = id;
 	}
 
-	public Long getUuid() {
+	public String getUuid() {
 		return uuid;
 	}
 
-	public void setUuid(Long uuid) {
+	public void setUuid(String uuid) {
 		this.uuid = uuid;
 	}
 

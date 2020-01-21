@@ -8,7 +8,7 @@ public class CustomerDto implements Serializable {
 
 	private static final long serialVersionUID = 3248917713969658188L;
 	private Integer id;
-	private Long uuid;
+	private String uuid;
 	private String fname;
 	private String lname;
 
@@ -27,11 +27,11 @@ public class CustomerDto implements Serializable {
 		this.id = id;
 	}
 
-	public Long getUuid() {
+	public String getUuid() {
 		return uuid;
 	}
 
-	public void setUuid(Long uuid) {
+	public void setUuid(String uuid) {
 		this.uuid = uuid;
 	}
 
