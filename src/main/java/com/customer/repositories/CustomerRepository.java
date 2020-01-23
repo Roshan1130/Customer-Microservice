@@ -5,9 +5,8 @@ import org.springframework.stereotype.Repository;
 
 import com.customer.entities.CustomerEntity;
 
-
 @Repository
-public interface CustomerRepository extends CrudRepository<CustomerEntity, Integer> {
+public interface CustomerRepository extends CrudRepository <CustomerEntity, Integer> {
 	
 
 }

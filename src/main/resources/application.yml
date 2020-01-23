@@ -12,5 +12,20 @@ spring:
         show_sql: false
         format_sql: false
     database-platform: org.hibernate.dialect.MySQLDialect
+  application:
+    name: Mongo DB Example
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: mongo 
+      repositories:
+        enabled: true 
+
+#logging:
+#  level:
+#    root: INFO      
+#    com:
+#      customer: TRACE      
   
 
