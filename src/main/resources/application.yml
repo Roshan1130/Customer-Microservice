@@ -3,24 +3,17 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/customerMicroservice
-    username: root
-    password: 1234
+    url: jdbc:mysql://incurance-policy.cfwpjgkmdv6h.us-east-1.rds.amazonaws.com/customer_microservice
+    username: admin
+    password: 123admin
   jpa:
     properties:
       hibernate:
         show_sql: false
         format_sql: false
     database-platform: org.hibernate.dialect.MySQLDialect
-  application:
-    name: Mongo DB Example
-  data:
-    mongodb:
-      host: localhost
-      port: 27017
-      database: mongo 
-      repositories:
-        enabled: true 
+
+  
 
 #logging:
 #  level:
